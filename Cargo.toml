@@ -1,0 +1,12 @@
+[package]
+name = "acbidder"
+version = "0.1.0"
+authors = ["mike"]
+
+[dependencies]
+iron = "0.5.1"
+router = "0.5.1"
+
+[dev-dependencies]
+reqwest = "0.8.0"
+
