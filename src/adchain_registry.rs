@@ -1,4 +1,4 @@
-extern crate web3;
+use web3;
 
 use std::str::FromStr;
 use web3::types::*;
