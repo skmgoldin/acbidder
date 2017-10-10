@@ -22,9 +22,12 @@ fn respond_404(req: &mut Request) -> IronResult<Response> {
 
 fn respond_acq(req: &mut Request) -> IronResult<Response> {
     let domain = "hi";
+    const rpc: &str = "https://rinkeby.infura.io";
 
-    let (_eloop, http) = web3::transports::Http::new("http://localhost:8545").unwrap();
+    // TODO: Extract to global and keep alive
+    let (_eloop, http) = web3::transports::Http::new(rpc).unwrap();
     let web3 = web3::Web3::new(http);
+
     let adchain_registry = adchain_registry::RegistryInstance::new(&web3);
 
     if adchain_registry.is_in_registry(domain) {
