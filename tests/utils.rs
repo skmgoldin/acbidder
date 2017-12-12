@@ -1,7 +1,7 @@
 extern crate iron;
 extern crate acbidder;
 
-use acbidder::start_server;
+use acbidder::server::start_server;
 use self::iron::Listening;
 
 pub struct TestServer(Listening);
