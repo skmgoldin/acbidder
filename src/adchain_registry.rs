@@ -13,7 +13,7 @@ pub struct RegistryInstance<'a, T: 'a + web3::Transport> {
 impl<'a, T: web3::Transport> RegistryInstance<'a, T> {
 
     pub fn new(web3: &'a web3::Web3<T>) -> RegistryInstance<'a, T> {
-        const REGISTRY_ADDR: &str = "0x9452b742302e50a28660fd00748fa05e071f1470";
+        const REGISTRY_ADDR: &str = "0xf6423c8a6be00b56ba8d796078382f6db911e928";
 
         let instance = Contract::from_json(
             web3.eth(),
